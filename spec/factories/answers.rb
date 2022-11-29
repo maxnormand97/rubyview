@@ -11,6 +11,6 @@
 #
 FactoryBot.define do
   factory :answer do
-    
+    label { Faker::Lorem.sentence }
   end
 end

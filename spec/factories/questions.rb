@@ -11,6 +11,7 @@
 #
 FactoryBot.define do
   factory :question do
-    
+    label { Faker::Lorem.sentence }
+    description { Faker::Lorem.sentence }
   end
 end
