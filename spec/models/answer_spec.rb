@@ -2,14 +2,17 @@
 #
 # Table name: answers
 #
-#  id         :integer          not null, primary key
-#  label      :string
-#  type       :string
-#  created_at :datetime         not null
-#  updated_at :datetime         not null
+#  id          :integer          not null, primary key
+#  label       :string
+#  type        :string
+#  created_at  :datetime         not null
+#  updated_at  :datetime         not null
+#  question_id :integer
 #
 require 'rails_helper'
 
 RSpec.describe Answer, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  describe 'Associations' do
+    it { is_expected.to belong_to(:question) }
+  end
 end
