@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_11_29_043557) do
+ActiveRecord::Schema[7.0].define(version: 2022_11_29_043927) do
   create_table "answers", force: :cascade do |t|
     t.string "label"
     t.string "type"
@@ -18,6 +18,15 @@ ActiveRecord::Schema[7.0].define(version: 2022_11_29_043557) do
     t.datetime "updated_at", null: false
     t.integer "question_id"
     t.index ["question_id"], name: "index_answers_on_question_id"
+  end
+
+  create_table "assessment_questions", force: :cascade do |t|
+    t.integer "question_id"
+    t.integer "assessment_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["assessment_id"], name: "index_assessment_questions_on_assessment_id"
+    t.index ["question_id"], name: "index_assessment_questions_on_question_id"
   end
 
   create_table "assessments", force: :cascade do |t|
@@ -45,4 +54,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_11_29_043557) do
   end
 
   add_foreign_key "answers", "questions"
+  add_foreign_key "assessment_questions", "assessments"
+  add_foreign_key "assessment_questions", "questions"
 end

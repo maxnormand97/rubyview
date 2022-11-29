@@ -11,4 +11,6 @@
 #
 class Question < ApplicationRecord
   has_many :answers, dependent: :destroy
+  has_many :assessment_questions
+  has_many :assessments, through: :assessment_questions
 end

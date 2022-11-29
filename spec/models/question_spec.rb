@@ -14,5 +14,6 @@ require 'rails_helper'
 RSpec.describe Question, type: :model do
   describe 'Associations' do
     it { is_expected.to have_many(:answers).dependent(:destroy) }
+    it { is_expected.to have_many(:assessment_questions) }
   end
 end
