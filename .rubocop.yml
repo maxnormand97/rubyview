@@ -1,2 +1,29 @@
+AllCops:
+  NewCops: enable
+  Include:
+    - "**/Gemfile"
+    - "**/Rakefile"
+    - "app/mailers/**/*"
+    - "app/controllers/**/*"
+    - "app/jobs/**/*"
+    - "app/models/**/*"
+    - "config/initializers/*"
+  Exclude:
+    - "bin/*"
+    - "config/**/*"
+    - "db/**/*"
+    - "spec/fixtures/**/*"
+    - "tmp/**/*"
+    - "node_modules/**/*"
+    - "vendor/**/*"
+    - "bin/**/*"
+    - "log/**/*"
+    - "**/.DS_Store"
+  TargetRubyVersion: 2.7.1
+  SuggestExtensions: false
+
 Style/Documentation:
+  Enabled: false
+
+Lint/EmptyFile:
   Enabled: false
