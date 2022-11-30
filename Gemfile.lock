@@ -113,6 +113,8 @@ GEM
     jbuilder (2.11.5)
       actionview (>= 5.0.0)
       activesupport (>= 5.0.0)
+    jsbundling-rails (1.0.3)
+      railties (>= 6.0.0)
     json (2.6.2)
     loofah (2.19.0)
       crass (~> 1.0.2)
@@ -274,6 +276,7 @@ DEPENDENCIES
   faker
   importmap-rails
   jbuilder
+  jsbundling-rails
   puma (~> 5.0)
   rails (~> 7.0.4)
   rspec-rails
