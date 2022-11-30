@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 p "Seeding: #{__FILE__}"
 
 # Generate questions

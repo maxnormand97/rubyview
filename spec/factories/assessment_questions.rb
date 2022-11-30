@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # == Schema Information
 #
 # Table name: assessment_questions
@@ -10,6 +12,5 @@
 #
 FactoryBot.define do
   factory :assessment_question do
-    
   end
 end
