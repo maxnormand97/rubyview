@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class AssessmentsController < ApplicationController
   before_action :load_assessments
   before_action :load_assessment, only: [:edit]
@@ -6,7 +8,7 @@ class AssessmentsController < ApplicationController
 
   def edit; end
 
-  def new 
+  def new
     @assessment = Assessment.new
   end
 
