@@ -1,0 +1,11 @@
+<div class="flex">
+  <% assessments.each do |assessment| %>
+    <div class="text-center max-w-sm rounded overflow-hidden shadow-lg p-2 m-4">
+      <h1 class="text-3xl font-black"><%= assessment.title %></h1>
+      <p class="font-light mt-1 mb-2"><%= assessment.description %></p>
+        <%= link_to "Edit", edit_assessment_path(assessment),
+            class: "bg-indigo-500 text-white px-4 py-2 border rounded-md hover:border-indigo-500"
+        %>
+    </div>
+  <% end %>
+</div>

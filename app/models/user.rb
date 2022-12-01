@@ -12,5 +12,5 @@
 #  updated_at :datetime         not null
 #
 class User < ApplicationRecord
-  # has_many :assessments
+  has_many :assessments
 end

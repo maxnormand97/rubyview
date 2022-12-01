@@ -1,0 +1,9 @@
+<div class="mt-4">
+  <h1 class="mb-4 text-4xl font-black">Assessments</h1>
+</div>
+<%= render partial: "assessment", locals: { assessments: @assessments } %>
+<div class="mt-4">
+  <%= link_to "New", new_assessment_path,
+      class: "bg-indigo-500 text-white px-4 py-2 border rounded-md hover:border-indigo-500"
+  %>
+</div>

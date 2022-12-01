@@ -11,3 +11,8 @@
 }
 
 */
+
+/* TODO: override tailwind classes */
+main {
+  display: block !important;
+}
