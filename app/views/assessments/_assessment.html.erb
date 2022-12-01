@@ -1,11 +1,9 @@
-<div class="flex">
+<div class="grid grid-cols-3">
   <% assessments.each do |assessment| %>
-    <div class="text-center max-w-sm rounded overflow-hidden shadow-lg p-2 m-4">
+    <div class="text-center max-w-sm rounded overflow-hidden shadow-lg p-5 m-4">
       <h1 class="text-3xl font-black"><%= assessment.title %></h1>
       <p class="font-light mt-1 mb-2"><%= assessment.description %></p>
-        <%= link_to "Edit", edit_assessment_path(assessment),
-            class: "btn-main"
-        %>
+        <%= link_to "Edit", edit_assessment_path(assessment), class: "btn-main pb-2" %>
     </div>
   <% end %>
 </div>
