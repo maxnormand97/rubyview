@@ -2,7 +2,8 @@
 
 class AssessmentsController < ApplicationController
   before_action :load_assessments
-  before_action :load_assessment, only: %i[edit update]
+  before_action :load_assessment, only: %i[edit update destroy]
+  before_action :load_questions, only: %i[edit]
 
   def index; end
 
@@ -34,6 +35,16 @@ class AssessmentsController < ApplicationController
     end
   end
 
+  def destroy
+    respond_to do |format|
+      if @assessment.destroy!
+        format.html { redirect_to assessments_url, notice: 'Assessment was successfully deleted' }
+      else
+        format.html { redirect_to assessments_url, status: :unprocessable_entity }
+      end
+    end
+  end
+
   private
 
   def assessment_params
@@ -46,5 +57,10 @@ class AssessmentsController < ApplicationController
 
   def load_assessment
     @assessment = Assessment.find_by(id: params[:id])
+  end
+
+  def load_questions
+    # @questions = @assessment.questions
+    @questions = Question.all
   end
 end

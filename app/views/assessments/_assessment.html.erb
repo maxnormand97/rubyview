@@ -3,7 +3,9 @@
     <div class="text-center max-w-sm rounded overflow-hidden shadow-lg p-5 m-4">
       <h1 class="text-3xl font-black"><%= assessment.title %></h1>
       <p class="font-light mt-1 mb-2"><%= assessment.description %></p>
-        <%= link_to "Edit", edit_assessment_path(assessment), class: "btn-main pb-2" %>
+      <%= link_to "Edit", edit_assessment_path(assessment), class: "btn-main pb-2" %>
+      <%= link_to 'Delete', assessment_path(assessment), class: "btn-danger pb-2",
+        data: {turbo_method: :delete, turbo_confirm: 'Are you sure?'} %>
     </div>
   <% end %>
 </div>

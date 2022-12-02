@@ -19,7 +19,7 @@ class Question < ApplicationRecord
 
   validates :label, presence: true, uniqueness: { case_sensitive: false }
   validates :description, presence: true
-  validates :type, presence: true
+  validates :question_type, presence: true
 
   # Question Types:
   MULTI = 'multiple-choice'

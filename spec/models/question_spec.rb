@@ -24,6 +24,6 @@ RSpec.describe Question, type: :model do
     it { is_expected.to validate_presence_of(:label) }
     it { is_expected.to validate_uniqueness_of(:label).case_insensitive }
     it { is_expected.to validate_presence_of(:description) }
-    it { is_expected.to validate_presence_of(:type) }
+    it { is_expected.to validate_presence_of(:question_type) }
   end
 end
