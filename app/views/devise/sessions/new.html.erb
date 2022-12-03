@@ -10,18 +10,18 @@
           <div class="bg-white px-4 py-5 sm:p-6">
             <div class="grid grid-cols-6 gap-6">
               <div class="col-span-12 sm:col-span-12">
-                <%= f.label :email, class: "form-label" %><br />
+                <%= f.label :email, class: "form-label" %>
                 <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-field" %>
               </div>
 
               <div class="col-span-12 sm:col-span-12">
-                <%= f.label :password, class: "form-label" %><br />
+                <%= f.label :password, class: "form-label" %>
                 <%= f.password_field :password, autocomplete: "current-password", class: "form-field" %>
               </div>
 
               <% if devise_mapping.rememberable? %>
                 <div class="flex">
-                  <%= f.check_box :remember_me, class: "h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500" %>
+                  <%= f.check_box :remember_me, class: "h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500 mr-4" %>
                   <%= f.label :remember_me, class: "form-label"  %>
                 </div>
               <% end %>

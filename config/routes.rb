@@ -13,8 +13,9 @@ Rails.application.routes.draw do
     authenticate :user do
       resources :assessments
       resources :questions
+      resources :dashboard, only: [:index]
     end
-    root to: "home#index", as: :authenticated_user
+    root to: "dashboard#index", as: :authenticated_user
   end
   # Defines the root path route ("/")
   root 'home#index'
