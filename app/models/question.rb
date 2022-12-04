@@ -27,7 +27,7 @@ class Question < ApplicationRecord
     DROPDOWN = 'dropdown',
     TEXT = 'text', # Think about this one??? v2?
     CHECKBOX = 'checkbox' # True || False
-  ]
+  ].freeze
 
   # States
   # PENDING = 'pending'
