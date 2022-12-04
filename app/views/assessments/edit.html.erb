@@ -2,3 +2,9 @@
   <h1 class="mb-4 text-4xl font-black">Edit Assessment</h1>
 </div>
 <%= render partial: "form", locals: { assessment: @assessment } %>
+
+<div class="mt-4">
+  <h3 class="text-3xl font-bold mb-8">Add Questions</h3>
+</div>
+
+<%= render partial: "question_table", locals: { questions: @questions } %>

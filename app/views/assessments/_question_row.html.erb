@@ -1,0 +1,25 @@
+<% @questions.each do |question| %>
+  <tr class="bg-white border-b">
+    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+      <%= check_box_tag 'select_all',
+        'all',
+        false,
+        class: 'h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500 mr-4"',
+        # TODO: implement stimulus controller...
+        data: {
+          # target:"shared-table.selectAllCheckbox",
+          # action:"click->shared-table#toggleSelectAll"
+        }
+      %>
+    </td>
+    <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+      <%= question.label %>
+    </td>
+    <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+      <%= question.description %>
+    </td>
+    <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+      <%= question.question_type %>
+    </td>
+  </tr>
+<% end %>
