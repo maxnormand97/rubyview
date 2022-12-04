@@ -7,21 +7,22 @@
             <div class="grid grid-cols-6 gap-6">
               <div class="col-span-12 sm:col-span-12">
                 <%= form.label :label, class: "form-label" %>
-                <%= form.text_field :label, placeholder: "title...", class: "form-field" %>
+                <%= form.text_field :label, placeholder: "title...", default_value: @question.label, class: "form-field" %>
               </div>
 
               <div class="col-span-12 sm:col-span-12">
                 <%= form.label :description, class: "form-label" %>
-                <%= form.text_area :description, placeholder: "title...", class: "form-field" %>
+                <%= form.text_area :description, placeholder: "title...", default_value: @question.description, class: "form-field" %>
               </div>
 
               <div class="col-span-12 sm:col-span-12">
                 <%= form.label :question_type, class: "form-label" %>
-                <%= form.text_area :question_type, placeholder: "title...", class: "form-field" %>
+                <%= form.text_area :question_type, placeholder: "title...", default_value: @question.question_type, class: "form-field" %>
               </div>
             </div>
           </div>
           <div class="bg-gray-50 px-4 py-3 text-right sm:px-6">
+            <%= link_to "Cancel", questions_path, class: "btn-secondary" %>
             <%= form.submit "Save", class: "inline-flex justify-center btn-main" %>
           </div>
         </div>

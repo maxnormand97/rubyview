@@ -12,7 +12,9 @@ Rails.application.routes.draw do
   devise_scope :user do
     authenticate :user do
       resources :assessments
-      resources :questions
+      resources :questions do 
+        resources :answers, except: [:index, :show]
+      end
       resources :dashboard, only: [:index]
     end
     root to: "dashboard#index", as: :authenticated_user

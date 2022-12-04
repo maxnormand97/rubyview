@@ -28,17 +28,17 @@ class Question < ApplicationRecord
   CHECKBOX = 'checkbox' # True || False
 
   # States
-  PENDING = 'pending'
-  ACTIVED = 'actived'
-  ARCHIVED = 'archived'
+  # PENDING = 'pending'
+  # ACTIVED = 'actived'
+  # ARCHIVED = 'archived'
 
-  state_machine :state, initial: PENDING do
-    event 'activate' do
-      transition(PENDING => ACTIVED)
-    end
+  # state_machine :state, initial: PENDING do
+  #   event 'activate' do
+  #     transition(PENDING => ACTIVED)
+  #   end
 
-    event 'archived' do
-      transition([PENDING, ACTIVED] => ARCHIVED)
-    end
-  end
+  #   event 'archived' do
+  #     transition([PENDING, ACTIVED] => ARCHIVED)
+  #   end
+  # end
 end

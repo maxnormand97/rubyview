@@ -1,8 +1,10 @@
-    <%= link_to sanitize("&larr; Back to quotes"), assessments_path %>
+<main class="container">
 
   <div class="header">
-    <h1>New question</h1>
+    <h1>Edit question</h1>
   </div>
+
   <%= turbo_frame_tag @question do %>
     <%= render "form", question: @question %>
   <% end %>
+</main>
