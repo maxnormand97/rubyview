@@ -12,12 +12,12 @@
 
               <div class="col-span-12 sm:col-span-12">
                 <%= form.label :description, class: "form-label" %>
-                <%= form.text_area :description, placeholder: "title...", default_value: @question.description, class: "form-field" %>
+                <%= form.text_area :description, placeholder: "description...", default_value: @question.description, class: "form-field" %>
               </div>
 
               <div class="col-span-12 sm:col-span-12">
                 <%= form.label :question_type, class: "form-label" %>
-                <%= form.text_area :question_type, placeholder: "title...", default_value: @question.question_type, class: "form-field" %>
+                <%= form.select(:question_type, Question::QUESTION_TYPES, { include_blank: false }, { class: "form-field" }) %>
               </div>
             </div>
           </div>

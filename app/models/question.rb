@@ -22,10 +22,12 @@ class Question < ApplicationRecord
   validates :question_type, presence: true
 
   # Question Types:
-  MULTI = 'multiple-choice'
-  DROPDOWN = 'dropdown'
-  TEXT = 'text' # Think about this one??? v2?
-  CHECKBOX = 'checkbox' # True || False
+  QUESTION_TYPES = [
+    MULTI = 'multiple-choice',
+    DROPDOWN = 'dropdown',
+    TEXT = 'text', # Think about this one??? v2?
+    CHECKBOX = 'checkbox' # True || False
+  ]
 
   # States
   # PENDING = 'pending'
