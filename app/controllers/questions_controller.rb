@@ -2,7 +2,7 @@
 
 class QuestionsController < ApplicationController
   before_action :load_questions, only: [:index]
-  before_action :load_question, only: [:show, :edit, :update, :destroy]
+  before_action :load_question, only: %i[show edit update destroy]
 
   def index; end
 
@@ -29,8 +29,8 @@ class QuestionsController < ApplicationController
   def update
     if @question.update!(question_params)
       respond_to do |format|
-        format.html { redirect_to questions_path, notice: "question was successfully updated." }
-        format.turbo_stream { flash.now[:notice] = "question was successfully updated." }
+        format.html { redirect_to questions_path, notice: 'question was successfully updated.' }
+        format.turbo_stream { flash.now[:notice] = 'question was successfully updated.' }
       end
     else
       render :edit, status: :unprocessable_entity
@@ -41,14 +41,14 @@ class QuestionsController < ApplicationController
     @question.destroy
 
     respond_to do |format|
-      format.html { redirect_to questions_path, notice: "question was successfully destroyed." }
-      format.turbo_stream { flash.now[:notice] = "question was successfully destroyed." }
+      format.html { redirect_to questions_path, notice: 'question was successfully destroyed.' }
+      format.turbo_stream { flash.now[:notice] = 'question was successfully destroyed.' }
     end
   end
 
   private
 
-  def load_question 
+  def load_question
     @question = Question.find(params[:id])
   end
 
